@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-express-app
+spec:
+  selector:
+    matchLabels:
+      run: my-express-app
+  template:
+    metadata:
+      labels:
+        run: my-express-app
+    spec:
+      containers:
+        - name: my-express-app
+          image: de.icr.io/my-express-app/my-express-app:latest
+          ports:
+            - containerPort: 3000
+      imagePullSecrets:
+        - name: all-icr-io
