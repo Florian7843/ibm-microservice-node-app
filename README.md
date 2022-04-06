@@ -1,5 +1,15 @@
 # How to push simple Node/Express microservice to IBM Kubernetes.
 
+## Prerequisites
+### Install KubeCTL
+´curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"´
+´sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl´
+
+### Install IBMCloud CLI
+´sudo curl -fsSL https://clis.cloud.ibm.com/install/linux | sh´
+
+## Write a application
+
 ## Dockerize the App
 
 ### Create Docker Image
